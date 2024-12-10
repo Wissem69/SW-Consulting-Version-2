@@ -114,10 +114,17 @@ a {
   text-decoration: none !important;
 }
 
+.h7{
+  color : white;
+  text-align: center;
+  font-weight: 500;
+
+}
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 
 ul {
   margin-bottom: 0px;
@@ -171,9 +178,15 @@ body {
     margin-bottom: 60px;
   }
 }
-
 .page-section {
   margin-top: 120px;
+}
+
+.horizontal-line {
+  width: 30%;
+  height: 1px;
+  background-color: #fe664e;
+  margin-bottom: 7%;
 }
 
 .section-heading {
@@ -234,7 +247,7 @@ header
 */
 
 .pre-header {
-  background-color: #efefef;
+  background: #ff7661;
   height: 60px;
   padding: 15px 0px;
 }
@@ -958,11 +971,12 @@ About Style
 */
 
 #about {
-  padding-top: 130px;
+  padding-top: 15px;
 }
 
 .about-left-image img {
   margin-right: 45px;
+  width : 510px
 }
 
 .about-right-content p {
@@ -1260,6 +1274,7 @@ Services Style
   display: block;
   text-align: center;
   margin: 0 auto;
+  width : 100%;
 }
 
 .services .naccs .menu div h4 {
@@ -1294,15 +1309,27 @@ Services Style
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+
 .services .naccs .menu div .thumb {
   display: inline-block;
   width: 100%;
   padding: 30px 0px;
-  background-color: #fff;
+  color: #7a7a7a; /* Texte grisé */
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
 }
 
 .services .naccs .menu div.active {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  color: white; /* Texte blanc */
+  opacity: 1; /* Pleine visibilité */
+  transition: all 0.3s ease-in-out;
+}
+
+
+.services .naccs .menu div.active .thumb {
+  color: #2a2a2a; /* Couleur de texte */
+  opacity: 1; /* Pleine visibilité */
+  transition: all 0.3s ease; /* Animation fluide */
 }
 
 .services ul.nacc {
@@ -1467,6 +1494,7 @@ Free Quote
 Portfolio
 ---------------------------------------------
 */
+
 
 .our-portfolio {
   padding-top: 130px;
@@ -1812,10 +1840,12 @@ form#contact #map iframe {
 
 .fill-form {
   padding: 80px 60px 80px 30px;
+
 }
 
 .fill-form .info-post {
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .fill-form .icon {
@@ -2099,4 +2129,79 @@ responsive
   form#contact {
     padding: 30px;
   }
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Aligne verticalement si nécessaire */
+}
+
+
+
+
+
+
+
+
+
+.footer-area {
+  background-color: #fff; /* Fond sombre */
+  color: #fff; /* Texte blanc */
+  padding: 50px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-area h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-contact-info,
+.footer-links,
+.footer-social-media {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact-info li,
+.footer-links li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff7661; /* Couleur d'accentuation au survol */
+}
+
+.footer-social-media li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-social-media a {
+  color: #aaa;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social-media a:hover {
+  color: #ff7661; /* Couleur d'accentuation au survol */
+}
+
+.footer-text {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #fff;
+  border-top: 0.1px solid #fff;
+  padding-top: 20px;
+  opacity: 0.5;
 }
