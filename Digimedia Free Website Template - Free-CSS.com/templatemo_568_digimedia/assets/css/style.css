@@ -1445,6 +1445,17 @@ Free Quote
   z-index: 2;
   margin-top: 130px;
 }
+.free-quote2 {
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 120px 0px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 130px;
+}
 
 .free-quote .section-heading {
   margin-bottom: 60px;
