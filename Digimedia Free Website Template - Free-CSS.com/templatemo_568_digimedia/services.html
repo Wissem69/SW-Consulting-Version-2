@@ -1,167 +1,956 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="assets/images/im/logo_simple.png" type="image/x-icon">
 
-    <title>SW Conulting</title>
+  <title>SW Conulting</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
 
-TemplateMo 568 DigiMedia
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-https://templatemo.com/tm-568-digimedia
 
--->
-  </head>
+
+      .container_ {
+          max-width: 1200px;
+          margin: 50px auto;
+          position: relative;
+          text-align: center;
+      }
+
+      .title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #444;
+      }
+
+      .categories {
+          display: flex;
+          justify-content: space-around;
+          position: relative;
+          margin-top: 50px;
+      }
+
+      .category_ {
+          text-align: center;
+          width: 200px;
+          position: relative;
+          transition: transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .category_:hover {
+          transform: scale(1.05);
+          filter: brightness(1.1);
+      }
+
+      .icon-circle {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 50px;
+          background-color: #fff;
+          border: 8px solid;
+          margin: 0 auto 20px;
+          position: relative;
+          z-index: 2;
+          transition: box-shadow 0.3s ease;
+      }
+
+      .category_:hover .icon-circle {
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .pink { border-color: #ff6f91; }
+      .yellow { border-color: #ffd166; }
+      .green { border-color: #06d6a0; }
+      .purple { border-color: #9c89b8; }
+
+      .connector {
+          width: 4px;
+          height: 160px;
+          background-color: #ddd;
+          position: absolute;
+          top: 120px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+      }
+
+      .small-circle {
+          width: 30px;
+          height: 30px;
+          background-color: #fff;
+          border: 5px solid;
+          border-radius: 50%;
+          position: absolute;
+          top: 260px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+          transition: box-shadow 0.3s ease;
+      }
+
+      .category_:hover .small-circle {
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .pink-border { border-color: #ff6f91; }
+      .yellow-border { border-color: #ffd166; }
+      .green-border { border-color: #06d6a0; }
+      .purple-border { border-color: #9c89b8; }
+
+      .h_cat {
+          font-size: 18px;
+          font-weight: 700;
+          margin-top: 90px;
+          margin-bottom: 5px;
+          transition: color 0.3s ease;
+      }
+
+      .categorisation {
+          font-size: 14px;
+          color: #666;
+          margin: 0;
+          transition: color 0.3s ease;
+      }
+
+      .category_ h3, .category_ p {
+          position: relative;
+          top: 100px;
+      }
+
+      .horizontal-line_ {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: #ddd;
+          z-index: 0;
+      }
+
+      /* Style modal services */
+
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+      .modal-dialog {
+          max-width: 80%;
+          margin: 5% auto;
+      }
+
+      .modal-content {
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 20px;
+          border-radius: 15px;
+      }
+      /* Ajout du dégradé orange en haut de la fenêtre modale */
+      .modal-content::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 58px; /* Hauteur du dégradé */
+          background: linear-gradient(90deg, #ff7043, #f8b195);
+
+
+      }
+
+      .modal-header {
+          border-bottom: 1px solid #ddd;
+      }
+
+      .modal-body {
+          flex: 1;
+          overflow-y: auto;
+          font-size: 16px;
+      }
+
+      .btn-close {
+          font-size: 1.2rem;
+      }
+
+
+
+
+      section {
+          margin-top: 5rem;
+      }
+
+      h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          color: #fe664e;
+      }
+
+      .service-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+      }
+
+      .card {
+          background: #f9f9f9;
+          padding: 1.5rem;
+          border-left: 5px solid #fe664e;
+          border-radius: 8px;
+          transition: transform 0.3s, box-shadow 0.3s;
+          box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+      }
+
+      .card:hover {
+          transform: translateY(-5px);
+      }
+
+      .card h3 {
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+      }
+
+      .card p {
+          margin-bottom: 1rem;
+          color: #555;
+      }
+
+      .card a {
+          color: #fe664e;
+          text-decoration: none;
+          font-weight: 500;
+      }
+
+      .card a:hover {
+          text-decoration: underline;
+      }
+
+      /* Style section Sol data driven Services */
+
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+
+      .contain {
+          background: linear-gradient(135deg, #f9d29d, #f8b195);
+          padding: 6.5rem;
+          width: 100%;
+          border-radius: 0;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          text-align: center;
+      }
+
+      .contain h1 {
+          font-size: 2.5rem;
+          margin-bottom: 1.5rem;
+          color: #ff7043;
+          position: relative;
+          display: inline-block;
+      }
+
+      .contain p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          color: #555;
+      }
+
+      .features {
+          display: flex;
+          justify-content: center;
+          gap: 6rem;
+          flex-wrap: wrap;
+          margin-bottom: 5%;
+      }
+
+      .feature {
+          background: linear-gradient(135deg, #f9d29d, #f8b195);
+          width: 180px;
+          height: 180px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #333;
+          font-size: 1.2rem;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 50%;
+          position: relative;
+          transition: transform 0.3s, box-shadow 0.3s;
+          box-shadow: 0 0 30px 10px rgba(255, 165, 0, 0.2);
+      }
+
+      .feature::before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          right: -4px;
+          bottom: -4px;
+          border-radius: 50%;
+          padding: 4px;
+          background: linear-gradient(135deg, #ff7043, #e1bee7);
+          -webkit-mask:
+              linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+          -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+
+      }
+      .feature:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(255, 112, 67, 0.4);
+      }
+
+      /* Style de la flèche du scroll */
+      .scroll-down {
+        margin-bottom: 5%;
+           bottom: 2rem;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           cursor: pointer;
+       }
+
+       .arrow {
+           width: 15px;
+           height: 15px;
+           border-right: 3px solid #ff7043;
+           border-bottom: 3px solid #ff7043;
+           transform: rotate(45deg);
+           margin: 1px 0;
+           animation: blink 1.5s infinite;
+       }
+
+       .arrow:nth-child(2) {
+           animation-delay: 0.2s;
+       }
+
+       .arrow:nth-child(3) {
+           animation-delay: 0.4s;
+       }
+
+       @keyframes blink {
+           0%, 100% {
+               opacity: 1;
+           }
+           50% {
+               opacity: 0.2;
+           }
+       }
+
+       /* Style pourquoi choisir nos services ? */
+       .why-choose-us {
+         background: #f8f8f8; /* Fond clair */
+         padding: 2.5rem;
+         border-radius: 15px;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+         text-align: left;
+         margin: 3rem 0;
+         color: #333;
+       }
+
+       .section-title {
+         font-size: 2rem;
+         font-weight: 700;
+         margin-bottom: 1.5rem;
+         color: #ff7043;
+         text-align: center;
+       }
+
+       .benefits-list {
+         list-style: none;
+         padding: 0;
+       }
+
+       .benefits-list li {
+         display: flex;
+         align-items: center;
+         font-size: 1.2rem;
+         margin-bottom: 1rem;
+         background: #fff;
+         padding: 1rem;
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+         transition: transform 0.3s, box-shadow 0.3s;
+       }
+
+       .benefits-list li:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+       }
+
+       .benefits-list .icon {
+         font-size: 1.5rem;
+         margin-right: 1rem;
+         color: #ff7043;
+       }
+
+
+
+
+  </style>
+
+</head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- Pre-header Starts -->
-  <div class="pre-header">
-
-
-      <p class="h7">Découvrez comment SW Consulting peut vous accompagner !</p>
-      <style>
-        @keyframes bounce {
-          0% {
-            transform: translateY(0);
-          }
-          20% {
-            transform: translateY(-10px);
-          }
-          40% {
-            transform: translateY(0);
-          }
-          60% {
-            transform: translateY(-5px);
-          }
-          80% {
-            transform: translateY(0);
-          }
-          100% {
-            transform: translateY(0);
-          }
-        }
-
-        .h7 {
-
-          animation: bounce 3.5s ease infinite; /* Définition de l'animation */
-        }
-</style>
-
-
-
-  </div>
-  <!-- Pre-header End -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-                <img src="assets/images/im/logo.png" alt="Logo" style="width: 150px; height: auto;">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="accueil.html" >Accueil</a></li>
-              <li class="scroll-to-section"><a href="notre_histoire.html">Notre histoire</a></li>
-              <li class="scroll-to-section"><a href="equipe.html">Equipe</a></li>
-              <li class="scroll-to-section"><a href="services.html" class="active">Services</a></li>
-              <li class="scroll-to-section"><a href="blog.html">Blog</a></li>
-              <li class="scroll-to-section"><div class="border-first-button"><a href="contact.html">Contact</a></div></li>
-            </ul>
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+  <!--### Section en-tête ###-->
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+    <!-- ***** Preloader End ***** -->
 
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h6>SW Consulting agence</h6>
-                    <h2>Services</h2>
+    <!-- Pre-header Starts -->
+    <div class="pre-header">
+        <p class="h7">Découvrez comment SW Consulting peut vous accompagner !</p>
+        <style>
+          @keyframes bounce {
+            0% {
+              transform: translateY(0);
+            }
+            20% {
+              transform: translateY(-10px);
+            }
+            40% {
+              transform: translateY(0);
+            }
+            60% {
+              transform: translateY(-5px);
+            }
+            80% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          .h7 {
+
+            animation: bounce 3.5s ease infinite; /* Définition de l'animation */
+          }
+        </style>
+    </div>
+    <!-- Pre-header End -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="index.html" class="logo">
+                  <img src="assets/images/im/logo.png" alt="Logo" style="width: 150px; height: auto;">
+              </a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav">
+                <li class="scroll-to-section"><a href="accueil.html" class="active">Accueil</a></li>
+                <li class="scroll-to-section"><a href="notre_histoire.html">Notre histoire</a></li>
+                <li class="scroll-to-section"><a href="equipe.html">Equipe</a></li>
+                <li class="scroll-to-section"><a href="services.html">Services</a></li>
+                <li class="scroll-to-section"><a href="blog.html">Blog</a></li>
+                <li class="scroll-to-section"><div class="border-first-button"><a href="contact.html">Contact</a></div></li>
+              </ul>
+              <a class='menu-trigger'>
+                  <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 align-self-center">
+                <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h6>SW Consulting agence</h6>
+                      <h2>Services</h2>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-              <!-- <img src="assets/images/im/accueil1.gif" alt="GIF d'accueil"> -->
-          </div>
 
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <!--### Fin section en-tête ###-->
 
 
-  <footer>
+
+
+
+
+
+    <div class="container_">
+      <div class="col-lg-12">
+        <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+          <h6>Solutions Data-Driven</h6>
+          <h4>Nous proposons des solutions <em>data-driven </em>pour </h4>
+          <div class="line-dec" style ="position: relative;left: 50%;transform: translate(-50%, -50%); margin-bottom: 70px;  "></div>
+        </div>
+      </div>
+      <div class="features">
+          <div class="feature wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.6s" >Augmenter votre compétitivité</div>
+          <div class="feature wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.7s">Optimiser vos opérations</div>
+          <div class="feature wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.8s">Améliorer l’expérience client</div>
+      </div>
+      <p>En fonction de vos priorités, nous vous accompagnons avec des services adaptés et innovants pour résoudre vos problématiques spécifiques. Découvrez nos axes d’intervention </p>
+
+    </div>
+    <div class="scroll-down" onclick="document.getElementById('categories-section').scrollIntoView({ behavior: 'smooth' })">
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+      <div class="arrow"></div>
+    </div>
+
+
+
+    <div class="contain" id="categories-section">
+      <div class="col-lg-12">
+        <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+          <h6>Solutions Data-Driven</h6>
+          <h4>Catégorisation des <em>axes d’une entreprise </em></h4>
+          <div class="line-dec" style ="position: relative;left: 50%;transform: translate(-50%, -50%); margin-bottom: 70px;  "></div>
+        </div>
+      </div>
+        <div class="categories">
+            <div class="category_" data-bs-toggle="modal" data-bs-target="#modalOperationnel">
+                <div class="icon-circle pink">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="connector"></div>
+                <div class="small-circle pink-border"></div>
+                <h3 class="h_cat">Opérationnel</h3>
+                <p class="categorisation">Gestion des services, infrastructure, automatisation.</p>
+            </div>
+            <div class="category_" data-bs-toggle="modal" data-bs-target="#modalSecurite">
+                <div class="icon-circle yellow">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="connector"></div>
+                <div class="small-circle yellow-border"></div>
+                <h3 class="h_cat">Sécurité</h3>
+                <p class="categorisation">Protection des données et conformité.</p>
+            </div>
+            <div class="category_" data-bs-toggle="modal" data-bs-target="#modalCommercial">
+                <div class="icon-circle green">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="connector"></div>
+                <div class="small-circle green-border"></div>
+                <h3 class="h_cat">Commercial</h3>
+                <p class="categorisation">Fidélisation et personnalisation client.</p>
+            </div>
+            <div class="category_" data-bs-toggle="modal" data-bs-target="#modalStrategique">
+                <div class="icon-circle purple">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="connector"></div>
+                <div class="small-circle purple-border"></div>
+                <h3 class="h_cat">Stratégique</h3>
+                <p class="categorisation">Tarification, prévisions, différenciation.</p>
+            </div>
+        </div>
+        <!-- <div class="horizontal-line_"></div> -->
+    </div>
+
+
+    <!--## Modals Ajoutés ##-->
+    <!-- Operationnal modal -->
+    <div class="modal fade" id="modalOperationnel" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <section>
+            <div class="col-lg-12">
+              <div class="section-heading " >
+                <h6>Axe Opérationnel</h6>
+                <h4>Optimisation des Processus <em>Internes</em></h4>
+                <div class="line-dec"></div>
+                <p style ="position: relative; margin-top: 15px; margin-bottom: 15px;">Si vous avez pour ambition d'améliorer l'axe opérationnel de votre entreprise alors faites nous confiance pour simplifier et automatiser vos opérations internes pour gagner en efficacité et réduire les coûts ! </br>Nous vous proposons des solutions pratiques pour améliorer vos processus quotidiens telles que : </p>
+              </div>
+            </div>
+
+              <div class="service-list">
+                  <div class="card">
+                      <h3>La gestion des services et infrastructure</h3>
+                        <p>- Construction de pipelines ETL/ELT pour automatiser le traitement des données.</p>
+                        <p>- Déploiment d'une infrastructure Cloud</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Automatisation des tâches</h3>
+                        <p>- Génération automatisée de rapports et visualisations</p>
+                        <p>- Mise en place de suivi des KPIs</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Surveillance et gestion des incidents</h3>
+                      <p>- Surveillance proactive, anticipations des incidents pour réduire les temps d'arrêt et assurer la continuité de service</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Planification stratégique</h3>
+                      <p>Prévisions et simulations : Anticipez les besoins et ajustez vos stratégies grâce à des outils de simulation avancés.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Security modal -->
+    <div class="modal fade" id="modalSecurite" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <section>
+            <div class="col-lg-12">
+              <div class="section-heading " >
+                <h6>Axe Sécurité</h6>
+                <h4>Protection et Conformité<em> des données</em></h4>
+                <div class="line-dec"></div>
+                <p style ="position: relative; margin-top: 15px; margin-bottom: 15px;">Nous vous aidons à protégez vos données et à respectez les réglementations grâce à nos solutions de sécurité renforcées telles que : </p>
+              </div>
+            </div>
+
+              <div class="service-list">
+                  <div class="card">
+                      <h3>Analyse prédictive des données</h3>
+                        <p>- Sécurité renforcée grâce à l'analyse prédictive. Détectez et prévenez les menaces avant qu'elles ne surviennent.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Conformité réglementaire</h3>
+                        <p>- %Assistance à la conformité : Respectez les normes en vigueur et évitez les risques liés à la non-conformité.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Commercial modal -->
+    <div class="modal fade" id="modalCommercial" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <section>
+            <div class="col-lg-12">
+              <div class="section-heading " >
+                <h6>Axe Commercial</h6>
+                <h4>Amélioration de l’Expérience <em>Client</em></h4>
+                <div class="line-dec"></div>
+                <p style ="position: relative; margin-top: 15px; margin-bottom: 15px;">Nous vous aidons à fidélisez vos clients et augmentez leur satisfaction grâce à des services personnalisés telles que : </p>
+              </div>
+            </div>
+
+              <div class="service-list">
+                  <div class="card">
+                      <h3>Expérience client optimisée</h3>
+                        <p>- Amélioration de l'espérience client</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Réduction de Churn (Taux d'attrition)</h3>
+                        <p>- Identification des signes de désengagement et fidélisation de vos clients avant leur départ.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Personnalisation des services</h3>
+                      <p>- Personalisation des services Cloud et téléphonie afin d'adapter vos offres aux besoin spécifiques de vos clients.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Strategic modal -->
+    <div class="modal fade" id="modalStrategique" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <section>
+            <div class="col-lg-12">
+              <div class="section-heading " >
+                <h6>Axe Stratégique</h6>
+                <h4>Décisions éclairées pour un <em>avenir Prometteur</em></h4>
+                <div class="line-dec"></div>
+                <p style ="position: relative; margin-top: 15px; margin-bottom: 15px;">Affinez vos stratégies commerciales et différenciez-vous grâce à des analyses précises et des prévisions fiables telles que : </p>
+              </div>
+            </div>
+
+              <div class="service-list">
+                  <div class="card">
+                      <h3>Optimisation des Offres et Tarification</h3>
+                        <p>- Tarification basée sur la data : Ajustez vos prix pour maximiser vos profits et attirer vos cibles.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Gestion et Visualisation des Données</h3>
+                        <p>- Gestion des données clients : Exploitez vos données pour mieux comprendre vos clients et leurs besoins.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Détection des Cybermenaces</h3>
+                      <p>- Détection des menaces émergentes : Anticipez les risques pour sécuriser vos opérations.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Simulations et Recommandations</h3>
+                      <p>Simulations de scénarios business : Planifiez vos prochaines étapes stratégiques avec précision.</p>
+                      <p>Recommandations sur mesure : Recevez des conseils adaptés à vos défis spécifiques.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+                  <div class="card">
+                      <h3>Visualisation pour Prise de Décision</h3>
+                      <p>Visualisation des données : Simplifiez l’analyse complexe pour prendre des décisions rapides et éclairées.</p>
+                      <p>Analyse des ventes et comportements clients : Identifiez les opportunités et optimisez vos processus.</p>
+                      <a href="contact.html">Contactez-nous pour en savoir plus</a>
+                  </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Porquoi choisir nos services -->
+    <div class="container">
+      <div class="why-choose-us">
+        <h4 class="section-title">💡 <strong>Pourquoi choisir nos services ?</strong></h4>
+        <ul class="benefits-list">
+          <li>
+            <span class="icon">📊</span>
+            <strong>Expertise Data-Driven </strong>&nbsp;  Des solutions basées sur des analyses précises et des technologies avancées.
+          </li>
+          <li>
+            <span class="icon">🏆</span>
+            <strong>Compétitivité Renforcée </strong>&nbsp; Un accompagnement pour vous démarquer sur votre marché.
+          </li>
+          <li>
+            <span class="icon">⏱️</span>
+            <strong>Efficacité Optimisée </strong>&nbsp; Des opérations fluidifiées et des coûts réduits.
+          </li>
+          <li>
+            <span class="icon">😊</span>
+            <strong>Clients Satisfaits </strong>&nbsp; Des expériences personnalisées et une fidélité accrue.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!--## Section devis ##-->
+    <div id="free-quote" class="free-quote">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+              <h6>Nous sommes là pour vous aider à transformer vos défis en opportunités grâce à la puissance des données. </h6>
+              <h4>Prêt à booster votre entreprise ?</h4>
+              <div class="line-dec"></div>
+            </div>
+          </div>
+          <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+              <div class="row">
+                <div class="border-first-button2"><a href="contact.html">Contactez-nous pour une consultation gratuite !</a></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="contact" class="contact-us section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+              <h6>Contact</h6>
+              <h4>Contactez nous <em>maintenant</em></h4>
+              <div class="line-dec"></div>
+            </div>
+          </div>
+          <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+            <form id="contact" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="contact-dec">
+                    <img src="assets/images/contact-dec-v2.png" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <div id="map">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Lyon,+France&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" lowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="fill-form">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="info-post">
+                          <div class="icon">
+                            <img src="assets/images/phone-icon.png" alt="">
+                            <a href="#">07.67.73.12.29</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="info-post">
+                          <div class="icon">
+                            <img src="assets/images/email-icon.png" alt="">
+                            <a href="#" style="font-size:10px;">swconsulting.agence@hotmail.com</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="info-post">
+                          <div class="icon">
+                            <img src="assets/images/location-icon.png" alt="">
+                            <a href="#">Lyon, France</a>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-6">
+                        <fieldset>
+                          <input type="name" name="name" id="name" placeholder="Nom" autocomplete="on" required>
+                        </fieldset>
+                        <fieldset>
+                          <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Votre email" required="">
+                        </fieldset>
+                        <fieldset>
+                          <input type="subject" name="subject" id="subject" placeholder="Objet" autocomplete="on">
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-6">
+                        <fieldset>
+                          <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="main-button ">Envoyer mon message</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-area">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2022 DigiMedia Co., Ltd. All Rights Reserved.
-          <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+        <!-- Section Contact -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Contactez-nous</h5>
+          <ul class="footer-contact-info">
+            <li><i class="fa fa-phone"></i> 07.67.73.12.29</li>
+            <li><i class="fa fa-envelope"></i> swconsulting.agence@outlook.fr</li>
+            <li><i class="fa fa-map-marker"></i> Lyon, France</li>
+          </ul>
+        </div>
+
+        <!-- Section Liens Utiles -->
+        <div class="col-lg-4 col-md-6">
+          <h5>Liens Utiles</h5>
+          <ul class="footer-links">
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="notre_histoire.html">Notre Histoire</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Section Liens Utiles -->
+        <div class="col-lg-4 col-md-12">
+          <h5>Nos politiques</h5>
+          <ul class="footer-links">
+            <li><a href="accueil.html">Politique de confidentialité</a></li>
+            <li><a href="notre_histoire.html">Mention légales</a></li>
+            <li><a href="services.html">CGV</a></li>
+          </ul>
+        </div>
+        <!-- Section Réseaux Sociaux -->
+        <div class="col-lg-4 col-md-12">
+          <h5>Suivez-nous</h5>
+          <ul class="footer-social-media">
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-github"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="footer-text">© 2024 SW Consulting. Tous droits réservés.</p>
         </div>
       </div>
     </div>
   </footer>
 
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
-
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
