@@ -1,110 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="assets/images/im/logo_simple.png" type="image/x-icon">
-  <title>SW Consulting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation de l'Équipe - SW Consulting</title>
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Importation de Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
 
-    body {
-      background-color: #fdfdfd;
-      color: #333;
-      line-height: 1.6;
-      padding: 2rem;
-    }
+        .team-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            color: #fff;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 40px;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        .team-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
 
-    .why-choose-us {
-      background: #f8f8f8; /* Fond clair */
-      padding: 2.5rem;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      text-align: left;
-      margin: 3rem 0;
-      color: #333;
-    }
+        .team-description {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
 
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #ff7043;
-      text-align: center;
-    }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-    .benefits-list {
-      list-style: none;
-      padding: 0;
-    }
+        .team-member {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
 
-    .benefits-list li {
-      display: flex;
-      align-items: center;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+        .team-member:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
 
-    .benefits-list li:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
+        .team-photo {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
 
-    .benefits-list .icon {
-      font-size: 1.5rem;
-      margin-right: 1rem;
-      color: #ff7043;
-    }
-  </style>
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-name {
+            font-size: 1.5em;
+            color: #0077b6;
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+
+        .member-role {
+            font-size: 1em;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+        }
+
+        .social-icons a {
+            color: #0077b6;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #023e8a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="why-choose-us">
-      <h2 class="section-title">💡 <strong>Pourquoi choisir nos services ?</strong></h2>
-      <ul class="benefits-list">
-        <li>
-          <span class="icon">📊</span>
-          <strong>Expertise Data-Driven</strong> : Des solutions basées sur des analyses précises et des technologies avancées.
-        </li>
-        <li>
-          <span class="icon">🏆</span>
-          <strong>Compétitivité Renforcée</strong> : Un accompagnement pour vous démarquer sur votre marché.
-        </li>
-        <li>
-          <span class="icon">⏱️</span>
-          <strong>Efficacité Optimisée</strong> : Des opérations fluidifiées et des coûts réduits.
-        </li>
-        <li>
-          <span class="icon">😊</span>
-          <strong>Clients Satisfaits</strong> : Des expériences personnalisées et une fidélité accrue.
-        </li>
-      </ul>
-    </div>
-  </div>
-</body>
+    <section class="team-section">
+        <h2 class="team-title">Notre Équipe - SW Consulting</h2>
+        <p class="team-description">Des experts passionnés qui transforment les données en opportunités.</p>
+    </section>
 
+    <div class="team-container">
+        <!-- Premier membre de l'équipe -->
+        <div class="team-member">
+            <img src="https://via.placeholder.com/300x300" alt="Photo de John Doe" class="team-photo">
+            <div class="member-info">
+                <h3 class="member-name">John Doe</h3>
+                <p class="member-role">Consultant Data Analyst</p>
+                <p class="member-bio">Expert en analyse de données et en solutions data-driven, John est passionné par la transformation des données en stratégies concrètes.</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- Deuxième membre de l'équipe -->
+        <div class="team-member">
+            <img src="https://via.placeholder.com/300x300" alt="Photo de Jane Smith" class="team-photo">
+            <div class="member-info">
+                <h3 class="member-name">Jane Smith</h3>
+                <p class="member-role">Consultante en Stratégie Digitale</p>
+                <p class="member-bio">Spécialiste en stratégie digitale et innovation, Jane aide nos clients à naviguer avec succès dans l'univers des données.</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

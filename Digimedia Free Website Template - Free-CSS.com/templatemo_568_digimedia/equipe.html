@@ -65,6 +65,7 @@
             padding-left: 50px;
             flex: 1;
             min-width: 250px;
+            margin-top: 20%;
         }
 
         .quote::before {
@@ -88,11 +89,15 @@
         .image-container {
             flex: 1;
             min-width: 250px;
+            min-height: 350px;
+            margin-top: 10%;
+
+
         }
 
         .image-container img {
             width: 100%;
-            height: auto;
+            height: 100% ;
             border-radius: 8px;
         }
 
@@ -102,42 +107,14 @@
             align-items: flex-start;
             background: linear-gradient(to top, #ff7e5f, #feb47b);
             padding: 60px 20px 40px;
-            border-radius: 8px;
+
             margin-top: 40px;
             position: relative;
         }
 
-        .team-member {
-            text-align: center;
-            color: #fff;
-            margin: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
 
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            object-fit: cover;
-            border: 4px solid #fff;
-            position: relative;
-            top: -100px;
-        }
 
-        .team-member h3 {
-            font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
 
-        .team-member p {
-            font-size: 14px;
-            line-height: 1.4;
-            max-width: 200px;
-            margin: auto;
-        }
     </style>
 </head>
 
@@ -230,7 +207,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <h6>SW Consulting agence</h6>
-                      <h2>Notre histoire</h2>
+                      <h2>Notre équipe</h2>
                     </div>
                   </div>
                 </div>
@@ -244,34 +221,193 @@
     <!--### Fin section en-tête ###-->
 
 
-    <div class="expert-team-section">
-        <h2>Our <strong>Expert Team</strong></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec velit eu felis vulputate dignissim a nec ligula.</p>
-        <div class="content-container">
-            <div class="quote">
-                Ne ex endunt il mosapeliquas aturio tem anis dolorem porrovi ducit, que in exereum quis sequi volor molupta tiaest, qui iuntem arisqui ut et omniand anditas et estib
-            </div>
-            <div class="image-container">
-                <img src="https://via.placeholder.com/600x400" alt="Expert Team">
-            </div>
+    <div class="container_">
+      <div class="col-lg-12">
+        <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+          <h6>Présentation de l'équipe</h6>
+          <h4>Une équipe unie pour <em>vos projets </em></h4>
+          <div class="line-dec" style ="position: relative;left: 50%;transform: translate(-50%, -50%); margin-bottom: 70px;  "></div>
         </div>
-        <p>
-            Ebit mo dolorporro quod ut dolor sit amet, consectetur adipisicing elit. Facilis repudiandae, quis labore fuga voluptas dolore veniam quos.
-        </p>
+      </div>
     </div>
 
-    <div class="team-members">
-        <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Mark Hon Tyrel">
-            <h3>MARK HON TYREL</h3>
-            <p>Occum est officia tasperf erepudiatur repudae nobiten dareem kus natunbusiam voluptatum rem vel et, cuscis exces et moluptas</p>
+    <div class="expert-team-section">
+
+        <p>Chez SW-Consulting, nous sommes une <strong>équipe de deux ingénieures soudées, passionnées par les données</strong> et animée par l'envie de faire avancer les projets de nos clients. Chacun de nous apporte son expertise, sa curiosité et son enthousiasme pour transformer les données en solutions concrètes et efficaces.
+            Nous croyons en l'importance du <strong>travail bien fait, en la force de la collaboration, et en l'impact des détails</strong>. Pour nous, chaque défi est une opportunité d'apprendre, d'innover et de grandir ensemble.</p>
+        <div class="content-container">
+            <div class="quote">
+                L'<strong>intelligence collective</strong> est la capacité d'une communauté à évoluer vers une complexité plus élevée grâce à la synergie des savoirs et des compétences
+                — Pierre Lévy
+            </div>
+
+            <div class="image-container">
+                <img src="assets/images/im/equipe2.png" alt="Expert Team">
+            </div>
         </div>
+
+          <p style="text-align : center;font-style: italic;">Avec rigueur, créativité et passion, nous vous accompagnons pour atteindre vos objectifs et bâtir, ensemble, un avenir éclairé par les données.</p>
+          <div class="scroll-down" onclick="document.getElementById('team-section').scrollIntoView({ behavior: 'smooth' })">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+          </div>
+    </div>
+
+    <div class="container_">
+
+    </div>
+
+
+
+    <style>
+        /* Importation de Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+
+
+        .team-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to top, #ff7e5f, #feb47b);
+            color: #fff;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 40px;
+        }
+
+        .team-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .team-description {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .team-member:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-name {
+            font-size: 1.5em;
+            color: #fe664e;
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+
+        .member-role {
+            font-size: 1em;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+        }
+
+        .social-icons a {
+            color: #fe664e;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #023e8a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+    <section class="team-section">
+      <div class="row" style="color: white !important;">
+        <h2>Notre Équipe - SW Consulting</h2>
+        <p >Des experts passionnés qui transforment les données en opportunités.</p>
+      </div>
+
+    </section>
+
+    <div class="team-container">
+        <!-- Premier membre de l'équipe -->
         <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Mark Hon Tyrel">
-            <h3>MARK HON TYREL</h3>
-            <p>Occum est officia tasperf erepudiatur repudae nobiten dareem kus natunbusiam voluptatum rem vel et, cuscis exces et moluptas</p>
+            <img src="assets/images/im/wissem.png" alt="Photo de John Doe" class="team-photo">
+            <div class="member-info">
+                <h3 class="member-name">Wissem CHERBAL</h3>
+                <p class="member-role">Data Analyst</p>
+                <p class="member-bio">Expert en analyse de données et en solutions data-driven, John est passionné par la transformation des données en stratégies concrètes.</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- Deuxième membre de l'équipe -->
+        <div class="team-member">
+            <img src="https://via.placeholder.com/300x300" alt="Photo de Jane Smith" class="team-photo">
+            <div class="member-info">
+                <h3 class="member-name">SOukaina DOUKKANI</h3>
+                <p class="member-role">Data Engineer</p>
+                <p class="member-bio">Spécialiste en stratégie digitale et innovation, Jane aide nos clients à naviguer avec succès dans l'univers des données.</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="footer-area">

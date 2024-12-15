@@ -1446,7 +1446,7 @@ Free Quote
   margin-top: 130px;
 }
 .free-quote2 {
-  
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1552,6 +1552,13 @@ Portfolio
 
 .our-portfolio .section-heading {
   margin-bottom: 80px;
+}
+
+.container_ {
+    max-width: 1200px;
+    margin: 50px auto;
+    position: relative;
+    text-align: center;
 }
 
 .our-portfolio .container-fluid {
